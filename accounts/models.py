@@ -88,7 +88,7 @@ class UserWithTenant(factory.django.DjangoModelFactory):
     class Meta:
         model = User
 
-    username = 't.mizuno'
+    username = 'taro'
 
 
 class TenantWithUser(factory.django.DjangoModelFactory):
@@ -96,6 +96,6 @@ class TenantWithUser(factory.django.DjangoModelFactory):
     class Meta:
         model = Tenant
 
-    name = 'AI-dea Inc.'
-    address = 'Ginza5-9-16'
+    name = 'hoge'
+    address = 'huga'
     relatedtenant = factory.RelatedFactory(UserWithTenant, 'tenant')
